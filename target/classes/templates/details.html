@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h3 th:text="${name}"></h3>
+    <div class="alert alert-info mt-2" th:each="el : ${date}">
+        <a class="btn btn-warning" th:href="'/details/'+ ${personId} + '/' + ${el.date}" th:text="${el.date}"></a>
+    </div>
+</div>
+
+</body>
+</html>
